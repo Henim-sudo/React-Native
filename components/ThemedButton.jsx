@@ -1,6 +1,6 @@
 import {StyleSheet, Pressable  } from 'react-native'
 import React from 'react'
-import { Colors } from '../constants/Colors'
+
 
 function ThemedButton ({ style, ...props })  {
   
@@ -46,9 +46,9 @@ const styles = StyleSheet.create({
   card1: {
     backgroundColor: 'hsla(0, 91.8%, 42.9%, 0.7)',
     padding: 20,
-    borderRadius: 5,
-    marginVertical: 10,
-    width: '100%',
+    borderRadius: 6,
+    marginVertical: 0,
+    width: '80%',
     alignItems: 'center',
     boxShadow: '4px 4px 4px rgba(0,0,0,0.7)',
   },
