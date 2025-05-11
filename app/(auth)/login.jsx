@@ -3,7 +3,7 @@ import { Link } from 'expo-router';
 import { Colors } from '../../constants/Colors';
 import { useState } from 'react';
 import { useUser } from '../../contexts/UserContext'; 
-import React from 'react';
+
 
 // Themed components
 import ThemedView from '../../components/ThemedView';
@@ -25,7 +25,7 @@ const Login = () => {
        try{  
            await login(email,password)
           }catch(error){
-             setError(error.messgae)
+             setError(error.message)
           }
          
         console.log('Login Form Submitted:', email, password);
@@ -59,6 +59,9 @@ const Login = () => {
                 <ThemedButton onPress={handleSubmit}>
                     <Text style={{ color: '#f2f2f2' }}>Login</Text>
                 </ThemedButton>
+
+                <Spacer/>
+                {error && <Text style={styles.error}>{error}</Text>}
                 <Spacer height={50} />
                 <Link href='/register'>
                     <ThemedText style={{ textAlign: 'center' }}>
@@ -84,4 +87,13 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         fontSize: 30,
     },
+    error:{
+        color: Colors.warning,
+        padding: 10,
+        backgroundColor:'#f5c1c8',
+        borderColor: Colors.warning,
+        borderWidth: 1,
+        borderRadius: 6,
+        marginHorizontal: 10,
+    }
 });
