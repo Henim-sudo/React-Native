@@ -65,6 +65,7 @@ const Login = () => {
                 <Spacer height={50} />
                 <Link href='/register'>
                     <ThemedText style={{ textAlign: 'center' }}>
+                        Don't have Account?
                         Register Instead
                     </ThemedText>
                 </Link>
